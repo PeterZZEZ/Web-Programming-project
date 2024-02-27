@@ -1,0 +1,146 @@
+:root{
+    --screenBackground:#58366c;
+    --boardBackground:#9d60c1;
+    --cellbackground:#ceb0e0;
+    --cellSize: 60px;
+    --missionSize: 100px;
+}
+body{
+    color: aliceblue;
+    justify-content:center;
+    display: flex;
+    align-items: center;
+    background-color: var(--screenBackground)
+}
+#gameboard{
+    margin: 5px;
+    aspect-ratio: 1;
+    width: calc(var(--cellSize)*11) ;
+    height: calc(var(--cellSize)*11) ;
+    background-color:var(--boardBackground);
+    /* display: flex; */
+}
+#gamepiece{
+    aspect-ratio: 1;
+    width: calc(var(--cellSize)*2.5);
+    height: calc(var(--cellSize)*2.5);
+    background-color:var(--boardBackground)
+}
+table{
+    table-layout: fixed;
+    object-fit: cover;
+    width: 100%;
+}
+
+td .cell{
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    aspect-ratio: 1 / 1 ;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+#seasons{
+    display: flex;
+    justify-content: space-around;
+}
+#seasons>.season{
+    color: white;
+    width: auto;
+    height: calc(var(--cellSize)*1.1);
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.spring{
+    background-color: orange;
+}
+.summer{
+    background-color: #1c852e;
+}
+.winter{
+    background-color:#2596be;
+}
+.autumn{
+    background-color: rgb(205, 205, 50);
+}
+#missions{
+    /* width: fit-content; */
+    display: flex;
+    flex-wrap: wrap;
+}
+#mission{
+    padding: 10px;
+    width: calc(var(--missionSize)*3);
+    height: calc(var(--missionSize));
+}
+#mission img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.current_mision img{
+    border-radius: 20px;
+    border: 2px solid yellow;
+}
+#mission{
+    position: relative;
+    text-align: center;
+}
+#mission .score{
+    font-size: x-large;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+.cell svg{
+    position: relative;
+    z-index: 1;
+}
+.biege{
+    background-color: var(--cellbackground);
+}
+.highlighted{
+    background-color: black;
+    opacity:80%;
+}
+.piecediv{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-right: 80px;
+}
+.piecediv button{
+    margin: 5px;
+}
+.timeCons{
+    text-align: center;
+    font-size: xx-large;
+}
+.timeCons svg{
+    fill: aliceblue;
+    border-top: 20px;
+    height: 80%;
+}
+#farm{
+    background-color: orange;
+}
+#town{
+    background-color:orangered;
+}
+#MT{
+    background-color:rgb(92, 64, 51);
+}
+#water{
+    background-color:#2596be;
+}
+#forest{
+    background-color: #1c852e;
+}
+.red{
+    background-color: red;
+    opacity: 100%;
+}
